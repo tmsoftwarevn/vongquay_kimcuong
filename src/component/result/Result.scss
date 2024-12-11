@@ -1,0 +1,291 @@
+@import '../css/media.scss';
+@import '../css/reset.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
+
+.modal {
+    font-family: 'Roboto';
+    .blur {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #ccc;
+    }
+    .content {
+        background-color: #f39c12;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        width: 90%;
+        @include xs {
+            height: 280px;
+        }
+        @include sm {
+            height: 35vh;
+            @media (orientation: landscape) {
+                width: 90%;
+                height: 95%;
+            }
+        }
+        @include md {
+            height: 35%;
+            @media (orientation: landscape) {
+                width: 80vw;
+                height: 90vh;
+            }
+        }
+        @include lg {
+            width: 70%;
+            height: 55%;
+        }
+        @include xl {
+            width: 55%;
+            height: 63%;
+        }
+
+        .anh-ketqua {
+            @include xs {
+                width: 100%;
+                height: 100%;
+            }
+            @include sm {
+                width: 100%;
+                height: 100%;
+            }
+            @include md {
+                width: 100%;
+                height: 100%;
+            }
+            @include lg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .btn-cancel {
+            color: #fd79a8;
+            @include xs {
+                position: absolute;
+                top: 5px;
+                right: 1px;
+                font-size: 30px;
+                cursor: pointer;
+            }
+            @include sm {
+                position: absolute;
+                top: 5px;
+                right: 1px;
+                font-size: 40px;
+                cursor: pointer;
+            }
+            @include lg {
+                position: absolute;
+                font-size: 50px;
+                top: 10px;
+                right: 4px;
+                cursor: pointer;
+            }
+        }
+        .trangchu {
+            display: block;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            &:hover {
+                color: #feca57;
+            }
+        }
+        .hetluot {
+            border-radius: 7px;
+            background-color: #fd79a8;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @include xs {
+                padding: 20px 20px;
+                width: 60%;
+            }
+            @include sm {
+                padding: 20px 40px;
+            }
+            @include md {
+                padding: 20px 60px;
+            }
+            @include lg {
+                padding: 20px 40px;
+            }
+            @include xl {
+                padding: 20px 60px;
+            }
+            p {
+                color: #feca57;
+                text-align: center;
+                @include xs {
+                    font-size: 14px;
+                }
+                @include sm {
+                    font-size: 18px;
+                }
+                @include lg {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .gift {
+            border-radius: 7px;
+            background-color: #fd79a8;
+            text-align: center;
+            @include xs {
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 10px 20px;
+                width: 80%;
+                font-size: 16px;
+            }
+            @include sm {
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 20px 40px;
+                width: 60%;
+            }
+            @include md {
+                width: 50%;
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 20px 40px;
+                @media (orientation: landscape) {
+                    padding: 20px 50px;
+                }
+            }
+            @include lg {
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 20px 40px;
+            }
+            @include xl {
+                position: absolute;
+                top: 25%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 10px 60px;
+            }
+            &__g {
+                color: black;
+                text-align: center;
+                @include xs {
+                }
+                @include sm {
+                    font-size: 18px;
+                }
+                @include lg {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+            }
+            span {
+                color: white;
+                font-weight: 500;
+                text-transform: capitalize;
+                @include xs {
+                }
+                @include sm {
+                }
+                @include lg {
+                    font-size: 20px;
+                }
+            }
+        }
+        .info {
+            @include xs {
+                position: absolute;
+                top: 70%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            @include sm {
+                position: absolute;
+                top: 75%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            @include md {
+                @media (orientation: landscape) {
+                    top: 70%;
+                }
+            }
+            @include lg {
+                position: absolute;
+                top: 75%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            @include xl {
+                position: absolute;
+                top: 70%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .text-info {
+            @include xs {
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                font-size: 26px;
+                width: 100%;
+            }
+            @include sm {
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+            @include lg {
+                position: absolute;
+                top: 42%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            @include xl {
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            &__t {
+                text-transform: capitalize;
+                color: black;
+
+                @include xs {
+                    font-size: 12px;
+                }
+                @include sm {
+                    font-size: 15px;
+                }
+                @include lg {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
