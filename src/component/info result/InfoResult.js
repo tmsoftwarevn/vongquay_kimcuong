@@ -1,18 +1,20 @@
 import "./finalResult.scss";
 import { MdOutlineCancel } from "react-icons/md";
+
 const InfoResult = (props) => {
   const { result, setModalFinalResult, handleSetModalButton } = props;
+
   return (
     <div className="final">
       <div className="blur"></div>
-      <div className="content">
+      <div className="content-final">
         <div className="group">
-          <p className="a">cảm ơn bạn đã xác nhận thông tin !</p>
+          <p className="a">Cảm ơn bạn đã xác nhận!</p>
           <p style={{ marginTop: "10px" }}>
-            Đây là phần quà của bạn: <span>{result}</span>
+            <span>{result}</span>
           </p>
           <p style={{ marginTop: "20px" }}>
-            Chúc bạn có những giây phút vui vẻ tại Piana Yoga!
+            Chúc bạn có những giây phút vui vẻ tại Lapola Jewelry!
           </p>
           <div
             className="btn-off"
@@ -30,4 +32,3 @@ const InfoResult = (props) => {
 };
 
 export default InfoResult;
-// tat modal

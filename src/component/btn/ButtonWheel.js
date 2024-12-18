@@ -26,7 +26,7 @@ const ButtonWheel = forwardRef((props, ref) => {
   return (
     <div className="btn-wheel">
       <div
-        className="content"
+        className="content_btn"
         onClick={() => {
           handleBtn();
         }}

@@ -70,7 +70,7 @@ function LoginPage() {
     <div className="content-register-page">
       <Card sx={{ minWidth: 375 }}>
         <CardHeader
-          title="Piana Yoga"
+          title="Lapola Jewelry"
           subheader="Đăng nhập tài khoản"
           style={{
             color: "blue",

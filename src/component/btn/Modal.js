@@ -99,15 +99,7 @@ const Modal = (props) => {
             <img src={quayngay} alt="btn-quay" className="anh_btn-quay" />
           </div>
         </div>
-        {/* <div
-          className="btn-cancel"
-          onClick={() => {
-            resetModalWheel();
-            handleSetModalButton(false);
-          }}
-        >
-          <MdOutlineCancel />
-        </div> */}
+       
       </div>
     </>
   );
