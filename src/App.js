@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AdminPage from "./component/route/Admin";
 import LoginPage from "./component/route/Login";
 import ChangePassword from "./component/route/ChangePassword";
+//import "./main.css";
+
 const App = () => {
   return (
     <BrowserRouter >

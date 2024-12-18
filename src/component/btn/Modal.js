@@ -18,10 +18,10 @@ const Modal = (props) => {
 
   const values = [
     { gift: "Sách Trái Tim Kim Cương", pct: 20 },
-    { gift: "Trang sức bạc", pct: 20 },
+    { gift: "Trang sức bạc", pct: 15 },
     { gift: "Gấu Baby Three 400%", pct: 5 },
-    { gift: "Sách/Voucher 10tr", pct: 15 },
-    { gift: "Voucher 10tr", pct: 20 },
+    { gift: "Sách/Voucher 10tr", pct: 10 },
+    { gift: "Voucher 10tr", pct: 30 },
     { gift: "Set quà mỹ phẩm chăm sóc da DMD", pct: 20 },
   ];
   const sliceSize = 360 / 6;
@@ -32,7 +32,7 @@ const Modal = (props) => {
     if (cookieValue === null) {
       setSpinning(true);
       const fullRots = 6;
-      const targetAngle = 300 * fullRots;
+      const targetAngle = 600 * fullRots;
       const expanded = values.flatMap((user) => Array(user.pct).fill(user));
       let indexRandom = Math.floor(Math.random() * expanded.length); // arr
       const winner = expanded[indexRandom]; // get element

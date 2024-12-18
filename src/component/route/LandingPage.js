@@ -35,6 +35,21 @@ const LandingPage = () => {
   useEffect(() => {
     hanleOffModalButton();
   }, [isModal]);
+
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const updateScreenSize = () => {
+      setIsMobile(window.innerWidth < 640); // Adjust to your mobile breakpoint
+    };
+
+    updateScreenSize(); // Set initial screen size
+    window.addEventListener('resize', updateScreenSize); // Listen to resize events
+
+    return () => {
+      window.removeEventListener('resize', updateScreenSize); // Cleanup
+    };
+  }, []);
+
   return (
     <>
       <div
@@ -46,11 +61,14 @@ const LandingPage = () => {
         }
       >
         <div className="parent">
-          <img src={banner_xs} alt="anh" className="anh_1" />
+          <img 
+          src={isMobile ? banner_xs : banner}
+          alt="anh" 
+          className="anh_1" />
           <div>
             <Wheel handleQuay={handleQuay} getResult={getResult} />
           </div>
-          <img src={anh3_xs} alt="anh" className="anh_3" />
+          <img  src={isMobile ? anh3_xs : anh3} alt="anh" className="anh_3" />
           <Divider />
           <div
             style={{ textAlign: "center", fontFamily: "Roboto" }}

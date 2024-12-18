@@ -36,7 +36,7 @@ const ButtonWheel = forwardRef((props, ref) => {
       {isWheel && (
         <>
           <div className="blur"> </div>
-          <div className="modal">
+          <div className="modall">
             <Modal
               handleQuay={handleQuay}
               getResult={getResult}

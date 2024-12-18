@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import anh2 from "../../image/anh2.jpg";
 import anh2_xs from "../../image/anh2-xs.jpg"
 import muiten from "../../image/mui ten.png";
@@ -14,10 +14,10 @@ const Wheel = (props) => {
 
   const values = [
     { gift: "Sách Trái Tim Kim Cương", pct: 20 },
-    { gift: "Trang sức bạc", pct: 20 },
+    { gift: "Trang sức bạc", pct: 15 },
     { gift: "Gấu Baby Three 400%", pct: 5 },
-    { gift: "Sách/Voucher 10tr", pct: 15 },
-    { gift: "Voucher 10tr", pct: 20 },
+    { gift: "Sách/Voucher 10tr", pct: 10 },
+    { gift: "Voucher 10tr", pct: 30 },
     { gift: "Set quà mỹ phẩm chăm sóc da DMD", pct: 20 },
   ];
   const sliceSize = 360 / 6;
@@ -28,7 +28,7 @@ const Wheel = (props) => {
     if (cookieValue === null) {
       setSpinning(true);
       const fullRots = 6;
-      const targetAngle = 300 * fullRots;
+      const targetAngle = 600 * fullRots;
       const expanded = values.flatMap((user) => Array(user.pct).fill(user));
       let indexRandom = Math.floor(Math.random() * expanded.length); // arr
       const winner = expanded[indexRandom]; // get element
@@ -64,10 +64,24 @@ const Wheel = (props) => {
     }
   };
 
+  const [isMobile, setIsMobile] = useState(false);
+    useEffect(() => {
+      const updateScreenSize = () => {
+        setIsMobile(window.innerWidth < 640); // Adjust to your mobile breakpoint
+      };
+  
+      updateScreenSize(); // Set initial screen size
+      window.addEventListener('resize', updateScreenSize); // Listen to resize events
+  
+      return () => {
+        window.removeEventListener('resize', updateScreenSize); // Cleanup
+      };
+    }, []);
+
   return (
     <>
       <div className="vongquay-container">
-        <img src={anh2_xs} alt="anh" className="anh_2" />
+        <img  src={isMobile ? anh2_xs : anh2} alt="anh" className="anh_2" />
 
         <div className="vongquay">
           <img src={muiten} alt="vong quay" className="arrow" />
