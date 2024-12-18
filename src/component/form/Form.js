@@ -24,7 +24,7 @@ const FormUser = (props) => {
   };
   const callAPI = () => {
     const dataBody = {
-      code: "1153831028",
+      code: "4453019749",
       name: name,
       phone: phone,
       prize: result,
@@ -32,7 +32,7 @@ const FormUser = (props) => {
       address: "",
     };
 
-    fetch("https://tmsoftware.vn/Woay/API/add.php", {
+    fetch("https://tmbranding.vn/Woay/API/add.php", {
       method: "POST",
       body: JSON.stringify(dataBody),
       headers: {
@@ -41,6 +41,8 @@ const FormUser = (props) => {
     })
       .then((response) => response.json())
       .then((result) => {
+        console.log('rrrrr', result);
+
         if (result && result["message"] === "already") {
           message.error("Số điện thoại đã được dùng");
         } else if (result && result["message"] === "success") {
@@ -52,6 +54,8 @@ const FormUser = (props) => {
       .catch((error) => {
         console.error(error);
       });
+
+    
   };
   const isVietnamesePhoneNumber = (number) => {
     return /(03|05|07|08|09)+([0-9]{8})\b/.test(number);
@@ -76,11 +80,12 @@ const FormUser = (props) => {
     }
 
     if (name && phone) {
-      //callAPI();
+      callAPI();
 
-      setModalFinalResult(true);
-      handleSetModalButton(true);
-      handleQuay(false);
+      // setModalFinalResult(true);
+      // handleSetModalButton(true);
+      // handleQuay(false);
+      
       //localStorage.setItem("TMWheel", "OK");
     }
   };

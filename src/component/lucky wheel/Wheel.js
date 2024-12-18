@@ -1,8 +1,8 @@
 import { useRef, useState } from "react";
 import anh2 from "../../image/anh2.jpg";
-
+import anh2_xs from "../../image/anh2-xs.jpg"
 import muiten from "../../image/mui ten.png";
-import vongquay from "../../image/VongQuay-piana.png";
+import vongquay from "../../image/VongQuay.png";
 import quayngay from "../../image/nutquay.png";
 import "./Wheel.scss";
 const Wheel = (props) => {
@@ -13,12 +13,12 @@ const Wheel = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const values = [
-    { gift: "Voucher 20%", pct: 90 },
-    { gift: "Vớ tập", pct: 2 },
-    { gift: "Khăn tập", pct: 2 },
-    { gift: "Bộ đồ tập Yoga", pct: 2 },
-    { gift: "Áo thun", pct: 2 },
-    { gift: "Combo Khăn, Vớ, Áo", pct: 2 },
+    { gift: "Sách Trái Tim Kim Cương", pct: 20 },
+    { gift: "Trang sức bạc", pct: 20 },
+    { gift: "Gấu Baby Three 400%", pct: 5 },
+    { gift: "Sách/Voucher 10tr", pct: 15 },
+    { gift: "Voucher 10tr", pct: 20 },
+    { gift: "Set quà mỹ phẩm chăm sóc da DMD", pct: 20 },
   ];
   const sliceSize = 360 / 6;
   const spinWheel = () => {
@@ -67,7 +67,7 @@ const Wheel = (props) => {
   return (
     <>
       <div className="vongquay-container">
-        <img src={anh2} alt="anh" className="anh_2" />
+        <img src={anh2_xs} alt="anh" className="anh_2" />
 
         <div className="vongquay">
           <img src={muiten} alt="vong quay" className="arrow" />

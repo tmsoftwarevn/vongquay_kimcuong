@@ -32,9 +32,10 @@ function LoginPage() {
     const dataBody = {
       user: valueUserName,
       password: valuePass,
+      key :"4453019749",
     };
 
-    fetch("https://tmsoftware.vn/Woay/User/index.php", {
+    fetch("https://tmbranding.vn/Woay/User/index.php", {
       method: "POST",
       body: JSON.stringify(dataBody),
       headers: {
@@ -43,10 +44,15 @@ function LoginPage() {
     })
       .then((response) => response.json())
       .then((result) => {
+        //console.log('reeeee', result);
+        
         const token = result["token"];
-        localStorage.setItem("TMVongQuayToken", token);
-        localStorage.setItem("TMVongQuayUser", "1153831028");
-        navigate("/admin");
+        if(token){
+          localStorage.setItem("TMVongQuayToken", token);
+          localStorage.setItem("TMVongQuayUser", "1153831028");
+          navigate("/admin");
+        }
+        
       })
       .catch((error) => {
         setOpen(false);

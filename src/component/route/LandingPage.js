@@ -5,7 +5,9 @@ import React, { useEffect, useRef, useState } from "react";
 import InfoResult from "../info result/InfoResult";
 import Result from "../result/Result";
 import banner from "../../image/banner.jpg";
+import banner_xs from "../../image/banner-xs.jpg"
 import anh3 from "../../image/anh3.jpg";
+import anh3_xs from "../../image/anh3-xs.jpg"
 import { Divider } from "antd";
 const LandingPage = () => {
   const [isModal, setIsModal] = useState(false);
@@ -44,11 +46,11 @@ const LandingPage = () => {
         }
       >
         <div className="parent">
-          <img src={banner} alt="anh" className="anh_1" />
+          <img src={banner_xs} alt="anh" className="anh_1" />
           <div>
             <Wheel handleQuay={handleQuay} getResult={getResult} />
           </div>
-          <img src={anh3} alt="anh" className="anh_3" />
+          <img src={anh3_xs} alt="anh" className="anh_3" />
           <Divider />
           <div
             style={{ textAlign: "center", fontFamily: "Roboto" }}

@@ -43,9 +43,9 @@ function AdminPage() {
       navigate("/login");
     } else {
       const dataBody = {
-        code: "1153831028",
+        code: "4453019749",
       };
-      fetch("https://tmsoftware.vn/Woay/API/select.php", {
+      fetch("https://tmbranding.vn/Woay/API/select.php", {
         method: "POST",
         body: JSON.stringify(dataBody),
         headers: {
@@ -54,6 +54,8 @@ function AdminPage() {
       })
         .then((response) => response.json())
         .then((result) => {
+          //console.log('rrrr', result);
+
           setValueData(result);
         })
         .catch((error) => {
@@ -64,10 +66,10 @@ function AdminPage() {
   };
   const handleDeleteUser = (phone) => {
     const dataBody = {
-      code: "1153831028",
+      code: "4453019749",
       phone: phone,
     };
-    fetch("https://tmsoftware.vn/Woay/API/delete.php", {
+    fetch("https://tmbranding.vn/Woay/API/delete.php", {
       method: "POST",
       body: JSON.stringify(dataBody),
       headers: {
@@ -76,7 +78,7 @@ function AdminPage() {
     })
       .then((response) => response.text())
       .then((result) => {
-        console.log("delete", result);
+        //console.log("delete", result);
         if (result && result === "success") {
           getCustomer();
           message.success("Xóa thành công");
@@ -122,7 +124,7 @@ function AdminPage() {
             buttonText="Tải file"
           />
         </div>
-        <div>
+        {/* <div>
           <button
             onClick={handleChangePassword}
             style={{
@@ -137,7 +139,7 @@ function AdminPage() {
           >
             Đổi mật khẩu
           </button>
-        </div>
+        </div> */}
       </div>
       <div style={{ height: "86vh", width: "100%" }}>
         <Paper sx={{ width: "100%" }}>

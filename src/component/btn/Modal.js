@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import anh2 from "../../image/anh2.jpg";
-import vongquay from "../../image/VongQuay-piana.png";
+import vongquay from "../../image/VongQuay.png";
 import "./Modal.scss";
 import { MdOutlineCancel } from "react-icons/md";
 import quayngay from "../../image/nutquay.png";
@@ -17,12 +17,12 @@ const Modal = (props) => {
   const refOutside = useRef(null);
 
   const values = [
-    { gift: "Voucher 20%", pct: 90 },
-    { gift: "Vớ tập", pct: 2 },
-    { gift: "Khăn tập", pct: 2 },
-    { gift: "Bộ đồ tập Yoga", pct: 2 },
-    { gift: "Áo thun", pct: 2 },
-    { gift: "Combo Khăn, Vớ, Áo", pct: 2 },
+    { gift: "Sách Trái Tim Kim Cương", pct: 20 },
+    { gift: "Trang sức bạc", pct: 20 },
+    { gift: "Gấu Baby Three 400%", pct: 5 },
+    { gift: "Sách/Voucher 10tr", pct: 15 },
+    { gift: "Voucher 10tr", pct: 20 },
+    { gift: "Set quà mỹ phẩm chăm sóc da DMD", pct: 20 },
   ];
   const sliceSize = 360 / 6;
   const spinWheel = () => {
