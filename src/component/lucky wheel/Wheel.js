@@ -65,7 +65,7 @@ const Wheel = (props) => {
   const [isMobile, setIsMobile] = useState(false);
     useEffect(() => {
       const updateScreenSize = () => {
-        setIsMobile(window.innerWidth < 640); // Adjust to your mobile breakpoint
+        setIsMobile(window.innerWidth < 1024); // Adjust to your mobile breakpoint
       };
   
       updateScreenSize(); // Set initial screen size
