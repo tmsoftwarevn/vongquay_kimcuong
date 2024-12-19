@@ -34,9 +34,7 @@ const Wheel = (props) => {
       const winner = expanded[indexRandom]; // get element
       let findIndexGift = values.findIndex((item) => item.gift === winner.gift);
       getResult(values[findIndexGift].gift);
-      //console.log("index gift is: ", findIndexGift);
-      //console.log("winner number: " + JSON.stringify(winner));
-
+      
       let initialRotation = 360;
       wheelRef.current.style.transition = "none";
       wheelRef.current.style.transform = `rotate(${initialRotation}deg)`;
